@@ -17,7 +17,7 @@ forecast_date <- config$run_config$forecast_start_datetime
 #                        endpoint_override = "https://amnh1.osn.mghpcc.org",
 #                        anonymous = TRUE)
 
-inflow_df <- duckdbfs::open_dataset(paste0("s3://bio230121-bucket01/vera4cast/forecasts/bundled-parquet/project_id=vera4cast/duration=P1D/"),
+inflow_df <- duckdbfs::open_dataset(paste0("s3://bio230121-bucket01/vera4cast/forecasts/parquet/project_id=vera4cast/duration=P1D/"),
                                     s3_endpoint = "amnh1.osn.mghpcc.org",
                                     anonymous = TRUE) |> 
   #arrow::open_dataset(inflow_s3) |> 
